@@ -1,0 +1,13 @@
+ErrorDocument 404 /index.php?page=404
+ErrorDocument 403 /index.php?page=403
+
+php_flag output_buffering On
+
+<IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+</IfModule>
+
+<FilesMatch "^\.">
+order allow,deny
+Deny from all
+</FilesMatch>
